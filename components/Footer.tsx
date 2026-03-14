@@ -42,7 +42,7 @@ const Footer: React.FC = () => {
             <ul className="space-y-3 text-sm">
                <li><Link to="/privacy-policy" className="hover:text-emerald-400 transition-colors">Privacy Policy</Link></li>
                <li><Link to="/terms-of-service" className="hover:text-emerald-400 transition-colors">Terms of Service</Link></li>
-              <li><span className="text-stone-500 cursor-default">Raybagh, Kashmir, J&K</span></li>
+              <li><span className="text-stone-500 cursor-default">Rajbagh, Kashmir, J&K</span></li>
               <li><a href="https://wa.me/919015312345" target="_blank" rel="noopener noreferrer" className="text-stone-500 hover:text-emerald-400 transition-colors flex items-center gap-2">
                 <MessageCircle size={14} className="text-emerald-500" /> +91 90153 12345
               </a></li>
