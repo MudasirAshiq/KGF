@@ -107,7 +107,7 @@ const initialData: AppData = {
     linkedin: "https://www.linkedin.com/in/aamir-latief-wani-2020415b/"
   },
   contactEmail: "info@kashmirgreenfuel.com",
-  contactAddress: "Raybagh, Kashmir, J&K"
+  contactAddress: "Rajbagh, Kashmir, J&K"
 };
 
 let currentData: AppData = { ...initialData };

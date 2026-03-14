@@ -108,7 +108,7 @@ const initialData = {
     }
   ],
   contactEmail: "info@kashmirgreenfuel.com",
-  contactAddress: "Raybagh, Kashmir, J&K"
+  contactAddress: "Rajbagh, Kashmir, J&K"
 };
 
 // Routes
