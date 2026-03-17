@@ -35,7 +35,7 @@ const initialData: AppData = {
     }
   ],
   stats: [
-    { id: 's1', value: 2400, suffix: ' tons', label: 'Waste Processed' },
+    { id: 's1', value: 2999, suffix: ' tons', label: 'to be processed' },
     { id: 's2', value: 7200, suffix: ' mWh', label: 'Clean Energy' },
     { id: 's3', value: 450, suffix: '+', label: 'Families Supported' },
     { id: 's4', value: 12000, suffix: ' kg', label: 'CO2 Offset' }
@@ -101,7 +101,7 @@ const initialData: AppData = {
   ],
   founder: {
     name: "Ar. Aamir Latief Wani",
-    role: "Founder & Principal Architect",
+    role: "Founder",
     bio: "An Edinburgh-based conservation architect, Aamir works on sustainable approaches to preserving heritage structures while making them energy efficient. He designs retrofitting strategies using wood pellets as a green, net-zero carbon emission fuel. Founder of Ecotherm Agritech (Converge Initiative Top 6, 2024-25) and DesArt Studios (Kashmir, 2018), he advocates for energy literacy and the revival of vernacular earthquake-resistant systems like Dhajji Dewari.",
     address: "Kashmir, India / Edinburgh, UK",
     linkedin: "https://www.linkedin.com/in/aamir-latief-wani-2020415b/"

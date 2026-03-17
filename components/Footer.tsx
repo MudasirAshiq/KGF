@@ -1,5 +1,5 @@
 import React from 'react';
-import { Leaf, Twitter, Linkedin, Instagram, ArrowUpRight, MessageCircle } from 'lucide-react';
+import { Leaf, Twitter, Linkedin, Instagram, ArrowUpRight, MessageCircle, Phone, PhoneCall } from 'lucide-react';
 import { Link } from 'react-router-dom';
 
 const Footer: React.FC = () => {
@@ -43,9 +43,16 @@ const Footer: React.FC = () => {
                <li><Link to="/privacy-policy" className="hover:text-emerald-400 transition-colors">Privacy Policy</Link></li>
                <li><Link to="/terms-of-service" className="hover:text-emerald-400 transition-colors">Terms of Service</Link></li>
               <li><span className="text-stone-500 cursor-default">Rajbagh, Kashmir, J&K</span></li>
-              <li><a href="https://wa.me/919015312345" target="_blank" rel="noopener noreferrer" className="text-stone-500 hover:text-emerald-400 transition-colors flex items-center gap-2">
-                <MessageCircle size={14} className="text-emerald-500" /> +91 90153 12345
-              </a></li>
+              <li>
+                <a href="tel:9906259906" className="text-stone-500 hover:text-emerald-400 transition-colors flex items-center gap-2">
+                  <PhoneCall size={14} className="text-emerald-500" /> +91 99062 59906
+                </a>
+              </li>
+              <li>
+                <a href="tel:01942313200" className="text-stone-500 hover:text-emerald-400 transition-colors flex items-center gap-2">
+                  <Phone size={14} className="text-emerald-500" /> 0194-2313200
+                </a>
+              </li>
             </ul>
           </div>
 
