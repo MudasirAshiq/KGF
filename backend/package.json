@@ -1,0 +1,16 @@
+{
+  "name": "kgf-backend",
+  "version": "1.0.0",
+  "description": "Backend for Kashmir Green Fuel website",
+  "main": "server.cjs",
+  "scripts": {
+    "start": "node server.cjs",
+    "dev": "node server.cjs"
+  },
+  "dependencies": {
+    "cors": "^2.8.6",
+    "dotenv": "^16.6.1",
+    "express": "^4.22.1",
+    "mongoose": "^8.23.0"
+  }
+}
