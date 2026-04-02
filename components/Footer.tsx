@@ -79,21 +79,23 @@ const Footer: React.FC = () => {
 
         <div className="border-t border-stone-800 pt-8 flex flex-col md:flex-row justify-between items-center text-xs text-center md:text-left">
           <p>&copy; {new Date().getFullYear()} Kashmir Green Fuel. All rights reserved.</p>
-          <div className="mt-4 md:mt-0 flex items-center justify-center md:justify-end gap-2">
-             <p className="text-white">Designed by</p>
-             <a 
-               href="https://www.quantafons.in/" 
-               target="_blank" 
-               rel="noopener noreferrer" 
-               className="flex items-center gap-1.5 px-2 py-1 bg-stone-800/50 rounded-lg hover:bg-stone-800 transition-colors cursor-pointer group/q"
-             >
-               <img 
-                 src="/quantafons_logo.jpg" 
-                 alt="QuantaFons" 
-                 className="h-5 w-auto rounded-sm group-hover/q:scale-105 transition-transform"
-               />
-               <span className="font-bold text-stone-300 tracking-tight">QuantaFons</span>
-             </a>
+          <div className="mt-8 md:mt-0 flex items-center justify-center md:justify-end gap-3 group/credits">
+            <span className="text-white font-bold text-sm tracking-tight">Designed by</span>
+            <a 
+              href="https://www.quantafons.in/" 
+              target="_blank" 
+              rel="noopener noreferrer" 
+              className="flex items-center gap-2 px-3.5 py-1.5 bg-[#121212] border border-white/10 rounded-full hover:bg-black hover:border-white/20 hover:scale-105 transition-all duration-300 shadow-xl group/q"
+            >
+              <div className="w-6 h-6 bg-white rounded-full flex items-center justify-center p-0.5 overflow-hidden">
+                <img 
+                  src="/quantafons_logo.jpg" 
+                  alt="QuantaFons Logo" 
+                  className="w-4 h-4 object-contain"
+                />
+              </div>
+              <span className="text-white font-bold text-sm tracking-tight">QuantaFons</span>
+            </a>
           </div>
         </div>
       </div>
