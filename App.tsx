@@ -2,7 +2,6 @@ import React from 'react';
 import { HashRouter as Router, Routes, Route } from 'react-router-dom';
 import Navigation from './components/Navigation';
 import Home from './Home';
-import Admin from './components/Admin';
 import Privacy from './components/Privacy';
 import Terms from './components/Terms';
 import NotFound from './components/NotFound';
@@ -28,7 +27,6 @@ const App: React.FC = () => {
           <div className="flex-grow">
             <Routes>
               <Route path="/" element={<Home />} />
-              <Route path="/admin" element={<Admin />} />
               <Route path="/privacy-policy" element={<Privacy />} />
               <Route path="/terms-of-service" element={<Terms />} />
               <Route path="*" element={<NotFound />} />

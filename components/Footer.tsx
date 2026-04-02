@@ -30,8 +30,11 @@ const Footer: React.FC = () => {
         <div className="grid grid-cols-1 md:grid-cols-3 gap-12 mb-16">
           <div className="col-span-1 md:col-span-1">
             <div className="flex items-center gap-2 text-white mb-6">
-              <Leaf className="text-emerald-500" />
-              <span className="text-xl font-bold tracking-tighter">KGF</span>
+              <img 
+                src="/KASHMIR GREEN FUEL.png" 
+                alt="KGF Logo" 
+                className="w-[180px] md:w-[230px] h-auto object-contain"
+              />
             </div>
             <p className="text-sm leading-relaxed mb-6">
               Pioneering the green energy revolution in Kashmir through sustainable biomass utilization and community empowerment.
@@ -74,11 +77,23 @@ const Footer: React.FC = () => {
           </div>
         </div>
 
-        <div className="border-t border-stone-800 pt-8 flex flex-col md:flex-row justify-between items-center text-xs">
+        <div className="border-t border-stone-800 pt-8 flex flex-col md:flex-row justify-between items-center text-xs text-center md:text-left">
           <p>&copy; {new Date().getFullYear()} Kashmir Green Fuel. All rights reserved.</p>
-          <div className="mt-2 md:mt-0 flex gap-4">
-            <p>Designed for Sustainability.</p>
-            <Link to="/admin" className="text-stone-600 hover:text-emerald-500 transition-colors">Admin Login</Link>
+          <div className="mt-4 md:mt-0 flex items-center justify-center md:justify-end gap-2">
+             <p className="text-white">Designed by</p>
+             <a 
+               href="https://www.quantafons.in/" 
+               target="_blank" 
+               rel="noopener noreferrer" 
+               className="flex items-center gap-1.5 px-2 py-1 bg-stone-800/50 rounded-lg hover:bg-stone-800 transition-colors cursor-pointer group/q"
+             >
+               <img 
+                 src="/quantafons_logo.jpg" 
+                 alt="QuantaFons" 
+                 className="h-5 w-auto rounded-sm group-hover/q:scale-105 transition-transform"
+               />
+               <span className="font-bold text-stone-300 tracking-tight">QuantaFons</span>
+             </a>
           </div>
         </div>
       </div>

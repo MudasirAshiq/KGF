@@ -116,15 +116,16 @@ const initialData = {
 // GET /api/content - Fetch all site content
 app.get('/api/content', async (req, res) => {
   try {
-    let data = await SiteData.findOne();
-    if (!data) {
-      // Seed if empty
-      data = new SiteData(initialData);
-      await data.save();
+    const data = await SiteData.findOne();
+    if (data) {
+      return res.json(data);
     }
-    res.json(data);
+    // If connected but empty, returned initialData
+    res.json(initialData);
   } catch (err) {
-    res.status(500).json({ message: err.message });
+    console.warn('Database not available, serving initial data.');
+    // Fail gracefully with fallback data
+    res.json(initialData);
   }
 });
 

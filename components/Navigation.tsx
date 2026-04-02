@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
-import { Menu, X, Leaf } from 'lucide-react';
-import { Link, useLocation, useNavigate } from 'react-router-dom';
+import { Menu, X } from 'lucide-react';
+import { useLocation, useNavigate } from 'react-router-dom';
 
 const Navigation: React.FC = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -43,36 +43,29 @@ const Navigation: React.FC = () => {
     setIsOpen(false);
   };
 
-  const isAdmin = location.pathname === '/admin';
   const isHome = location.pathname === '/';
-  // Use dark background if not on home (pages usually have white bg, so nav needs to be distinct)
-  const isOtherPage = !isHome && !isAdmin;
+  const isOtherPage = !isHome;
 
-  const navClasses = scrolled || isAdmin || isOtherPage
-    ? 'bg-stone-900/95 backdrop-blur-md py-4 shadow-lg' 
-    : 'bg-transparent py-6';
-
-  const textClasses = scrolled || isAdmin || isOtherPage
-    ? 'text-white'
-    : 'text-white'; // Hero has dark overlay, so white is good. But sticky needs contrast.
+  const navClasses = scrolled || isOtherPage
+    ? 'bg-stone-900/95 backdrop-blur-md py-3 shadow-lg' 
+    : 'bg-transparent py-5';
 
   return (
     <nav
       className={`fixed w-full z-50 transition-all duration-300 ${navClasses}`}
     >
       <div className="container mx-auto px-6 flex justify-between items-center">
-        <Link to="/" className="flex items-center gap-2 group">
-          <div className="w-10 h-10 bg-emerald-500 rounded-lg flex items-center justify-center text-white group-hover:bg-emerald-400 transition-colors">
-            <Leaf size={24} />
-          </div>
-          <span className={`text-2xl font-bold tracking-tighter ${textClasses}`}>
-            KGF
-          </span>
-        </Link>
+        <button onClick={() => scrollToSection('top')} className="relative h-12 w-[180px] md:w-[230px] group cursor-pointer">
+          <img 
+            src="/KASHMIR GREEN FUEL.png" 
+            alt="Kashmir Green Fuel Logo" 
+            className="absolute left-0 top-1/2 -translate-y-1/2 w-full h-auto object-contain transition-transform group-hover:scale-105"
+          />
+        </button>
 
         {/* Desktop Nav */}
         <div className="hidden md:flex items-center gap-8">
-          {!isAdmin && navLinks.map((link) => (
+          {navLinks.map((link) => (
             <button
               key={link.name}
               onClick={() => scrollToSection(link.id)}
@@ -84,21 +77,12 @@ const Navigation: React.FC = () => {
             </button>
           ))}
           
-          {isAdmin && (
-            <Link to="/" className="flex items-center gap-2 text-xs text-stone-400 hover:text-white transition-colors border border-stone-600 px-3 py-1 rounded-full">
-               <Leaf size={12}/>
-               View Site
-            </Link>
-          )}
-
-          {!isAdmin && (
-            <button
-              onClick={() => scrollToSection('model')}
-              className="px-6 py-2 bg-emerald-600 text-white rounded-full text-sm font-semibold hover:bg-emerald-500 transition-all shadow-lg hover:shadow-emerald-500/20 cursor-pointer"
-            >
-              Explore Model
-            </button>
-          )}
+          <button
+            onClick={() => scrollToSection('model')}
+            className="px-6 py-2 bg-emerald-600 text-white rounded-full text-sm font-semibold hover:bg-emerald-500 transition-all shadow-lg hover:shadow-emerald-500/20 cursor-pointer"
+          >
+            Explore Model
+          </button>
         </div>
 
         {/* Mobile Toggle */}
@@ -113,7 +97,7 @@ const Navigation: React.FC = () => {
       {/* Mobile Menu */}
       {isOpen && (
         <div className="absolute top-full left-0 w-full bg-stone-900 border-t border-stone-800 p-6 md:hidden flex flex-col gap-4 shadow-2xl">
-          {!isAdmin && navLinks.map((link) => (
+          {navLinks.map((link) => (
             <button
               key={link.name}
               onClick={() => scrollToSection(link.id)}
@@ -122,15 +106,6 @@ const Navigation: React.FC = () => {
               {link.name}
             </button>
           ))}
-           {isAdmin && (
-            <Link 
-              to="/" 
-              onClick={() => setIsOpen(false)}
-              className="text-stone-400 hover:text-white text-sm mt-4 flex items-center gap-2"
-            >
-              Back to Site
-            </Link>
-           )}
         </div>
       )}
     </nav>

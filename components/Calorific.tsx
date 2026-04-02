@@ -43,23 +43,25 @@ const Calorific: React.FC<Props> = ({ data }) => {
           </motion.div>
         </div>
 
-        <div className="lg:w-1/2 w-full h-[400px] min-h-[400px]">
+        <div className="lg:w-1/2 w-full">
           <h3 className="text-center text-sm font-bold text-stone-400 uppercase tracking-wider mb-8">Calorific Value (kcal/kg)</h3>
-          <ResponsiveContainer width="100%" height="100%" minWidth={300} minHeight={300}>
-            <BarChart data={data} layout="vertical" margin={{ top: 5, right: 30, left: 20, bottom: 5 }}>
-              <XAxis type="number" hide />
-              <YAxis dataKey="name" type="category" width={100} tick={{fill: '#57534e', fontSize: 14}} tickLine={false} axisLine={false}/>
-              <Tooltip 
-                cursor={{fill: 'transparent'}}
-                contentStyle={{ borderRadius: '12px', border: 'none', boxShadow: '0 10px 15px -3px rgba(0, 0, 0, 0.1)' }}
-              />
-              <Bar dataKey="value" barSize={40} radius={[0, 10, 10, 0]}>
-                {data.map((entry, index) => (
-                  <Cell key={`cell-${index}`} fill={entry.color} />
-                ))}
-              </Bar>
-            </BarChart>
-          </ResponsiveContainer>
+          <div className="h-[350px] w-full">
+            <ResponsiveContainer width="100%" height="100%" minWidth={0}>
+              <BarChart data={data} layout="vertical" margin={{ top: 5, right: 30, left: 20, bottom: 5 }}>
+                <XAxis type="number" hide />
+                <YAxis dataKey="name" type="category" width={100} tick={{fill: '#57534e', fontSize: 14}} tickLine={false} axisLine={false}/>
+                <Tooltip 
+                  cursor={{fill: 'transparent'}}
+                  contentStyle={{ borderRadius: '12px', border: 'none', boxShadow: '0 10px 15px -3px rgba(0, 0, 0, 0.1)' }}
+                />
+                <Bar dataKey="value" barSize={40} radius={[0, 10, 10, 0]}>
+                  {data.map((entry, index) => (
+                    <Cell key={`cell-${index}`} fill={entry.color} />
+                  ))}
+                </Bar>
+              </BarChart>
+            </ResponsiveContainer>
+          </div>
         </div>
       </div>
     </section>
