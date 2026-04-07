@@ -49,7 +49,7 @@ const initialData = {
     }
   ],
   stats: [
-    { id: 's1', value: 1500, suffix: ' tons', label: 'Waste Processed' },
+    { id: 's1', value: 3650, suffix: ' tons', label: 'of waste to be processed' },
     { id: 's2', value: 4500, suffix: ' mWh', label: 'Clean Energy' },
     { id: 's3', value: 300, suffix: '+', label: 'Families Supported' }
   ],

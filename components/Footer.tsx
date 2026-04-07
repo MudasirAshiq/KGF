@@ -80,22 +80,13 @@ const Footer: React.FC = () => {
         <div className="border-t border-stone-800 pt-8 flex flex-col md:flex-row justify-between items-center text-xs text-center md:text-left">
           <p>&copy; {new Date().getFullYear()} Kashmir Green Fuel. All rights reserved.</p>
           <div className="mt-8 md:mt-0 flex items-center justify-center md:justify-end gap-3 group/credits">
-            <span className="text-white font-bold text-sm tracking-tight">Designed by</span>
-            <a 
-              href="https://www.quantafons.in/" 
-              target="_blank" 
-              rel="noopener noreferrer" 
-              className="flex items-center gap-2 px-3.5 py-1.5 bg-[#121212] border border-white/10 rounded-full hover:bg-black hover:border-white/20 hover:scale-105 transition-all duration-300 shadow-xl group/q"
-            >
-              <div className="w-6 h-6 bg-white rounded-full flex items-center justify-center p-0.5 overflow-hidden">
-                <img 
-                  src="/quantafons_logo.jpg" 
-                  alt="QuantaFons Logo" 
-                  className="w-4 h-4 object-contain"
-                />
+            <span className="text-stone-500 font-medium text-xs tracking-wide">DESIGNED BY</span>
+            <div className="flex items-center gap-2.5 px-4 py-2 bg-stone-800/50 border border-stone-700/50 rounded-full hover:bg-stone-800 hover:border-emerald-500/30 transition-all duration-300 group/ds">
+              <div className="w-6 h-6 bg-emerald-600 rounded-lg flex items-center justify-center transform group-hover/ds:rotate-12 transition-transform duration-300">
+                <span className="text-white font-bold text-[10px] tracking-tighter">DS</span>
               </div>
-              <span className="text-white font-bold text-sm tracking-tight">QuantaFons</span>
-            </a>
+              <span className="text-stone-200 font-bold text-sm tracking-tight group-hover/ds:text-emerald-400 transition-colors duration-300">DesArt Social</span>
+            </div>
           </div>
         </div>
       </div>

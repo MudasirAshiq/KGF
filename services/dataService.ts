@@ -35,7 +35,7 @@ const initialData: AppData = {
     }
   ],
   stats: [
-    { id: 's1', value: 2400, suffix: ' tons', label: 'Waste Processed' },
+    { id: 's1', value: 3650, suffix: ' tons', label: 'of waste to be processed' },
     { id: 's2', value: 7200, suffix: ' mWh', label: 'Clean Energy' },
     { id: 's3', value: 450, suffix: '+', label: 'Families Supported' },
     { id: 's4', value: 12000, suffix: ' kg', label: 'CO2 Offset' }
