@@ -71,11 +71,14 @@ const Footer: React.FC = () => {
           <p>&copy; {new Date().getFullYear()} Kashmir Green Fuel. All rights reserved.</p>
           <div className="mt-8 md:mt-0 flex items-center justify-center md:justify-end gap-3 group/credits">
             <span className="text-stone-500 font-medium text-xs tracking-wide">DESIGNED BY</span>
-            <div className="flex items-center gap-2.5 px-4 py-2 bg-stone-800/50 border border-stone-700/50 rounded-full hover:bg-stone-800 hover:border-emerald-500/30 transition-all duration-300 group/ds">
-              <div className="w-6 h-6 bg-emerald-600 rounded-lg flex items-center justify-center transform group-hover/ds:rotate-12 transition-transform duration-300">
-                <span className="text-white font-bold text-[10px] tracking-tighter">DS</span>
+            <div className="flex items-center gap-2.5 px-4 py-2 bg-stone-800/40 border border-stone-700/50 rounded-full hover:bg-stone-800/80 hover:border-orange-500/50 transition-all duration-300 group/badge cursor-pointer">
+              <div className="w-6 h-6 bg-orange-500 rounded-md flex items-center justify-center transform group-hover/badge:rotate-[15deg] transition-transform duration-300">
+                <span className="text-white font-bold text-xs leading-none tracking-tighter">{'<>'}</span>
               </div>
-              <span className="text-stone-200 font-bold text-sm tracking-tight group-hover/ds:text-emerald-400 transition-colors duration-300">DesArt Social</span>
+              <span className="font-bold text-sm tracking-wider">
+                <span className="text-stone-400 group-hover/badge:text-white transition-colors duration-300">Code</span>
+                <span className="text-orange-500">FONS</span>
+              </span>
             </div>
           </div>
         </div>
