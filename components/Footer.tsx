@@ -70,8 +70,13 @@ const Footer: React.FC = () => {
         <div className="border-t border-stone-800 pt-8 flex flex-col md:flex-row justify-between items-center text-xs text-center md:text-left">
           <p>&copy; {new Date().getFullYear()} Kashmir Green Fuel. All rights reserved.</p>
           <div className="mt-8 md:mt-0 flex items-center justify-center md:justify-end gap-3 group/credits">
-            <span className="text-stone-500 font-medium text-xs tracking-wide">DESIGNED BY</span>
-            <div className="flex items-center gap-2.5 px-4 py-2 bg-stone-800/40 border border-stone-700/50 rounded-full hover:bg-stone-800/80 hover:border-orange-500/50 transition-all duration-300 group/badge cursor-pointer">
+            <span className="text-white font-bold text-sm tracking-wide">Designed By</span>
+            <a 
+              href="https://codefons.com" 
+              target="_blank" 
+              rel="noopener noreferrer"
+              className="flex items-center gap-2.5 px-4 py-2 bg-stone-800/40 border border-stone-700/50 rounded-full hover:bg-stone-800/80 hover:border-orange-500/50 transition-all duration-300 group/badge"
+            >
               <div className="w-6 h-6 bg-orange-500 rounded-md flex items-center justify-center transform group-hover/badge:rotate-[15deg] transition-transform duration-300">
                 <span className="text-white font-bold text-xs leading-none tracking-tighter">{'</>'}</span>
               </div>
@@ -79,7 +84,7 @@ const Footer: React.FC = () => {
                 <span className="text-stone-400 group-hover/badge:text-white transition-colors duration-300">Code</span>
                 <span className="text-orange-500">FONS</span>
               </span>
-            </div>
+            </a>
           </div>
         </div>
       </div>
